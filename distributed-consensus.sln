@@ -1,7 +1,33 @@
 ﻿Microsoft Visual Studio Solution File, Format Version 12.00
+Project("{2150E333-8FDC-42A3-9474-1A3956D46DE8}") = "Solution Items", "Solution Items", "{38C37BC2-C93F-4841-8112-350DAC1C9199}"
+ProjectSection(SolutionItems) = preProject
+	README.md = README.md
+	.editorconfig = .editorconfig
+	nuget.config = nuget.config
+EndProjectSection
+EndProject
+Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "Svv.Broadcaster", "src\dotnet\Svv.Broadcaster\Svv.Broadcaster.csproj", "{851ABC92-4E73-4A18-AD9C-601D89B393F4}"
+EndProject
+Project("{2150E333-8FDC-42A3-9474-1A3956D46DE8}") = "tests", "tests", "{36C16D18-3BD4-4CBC-825C-F3FA028F0398}"
+EndProject
+Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "Svv.Broadcaster.Tests", "tests\dotnet\Svv.Broadcaster.Tests\Svv.Broadcaster.Tests.csproj", "{C1FB3106-D681-4FEA-9974-C574FF2522F6}"
+EndProject
 Global
 	GlobalSection(SolutionConfigurationPlatforms) = preSolution
 		Debug|Any CPU = Debug|Any CPU
 		Release|Any CPU = Release|Any CPU
+	EndGlobalSection
+	GlobalSection(ProjectConfigurationPlatforms) = postSolution
+		{851ABC92-4E73-4A18-AD9C-601D89B393F4}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{851ABC92-4E73-4A18-AD9C-601D89B393F4}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{851ABC92-4E73-4A18-AD9C-601D89B393F4}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{851ABC92-4E73-4A18-AD9C-601D89B393F4}.Release|Any CPU.Build.0 = Release|Any CPU
+		{C1FB3106-D681-4FEA-9974-C574FF2522F6}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{C1FB3106-D681-4FEA-9974-C574FF2522F6}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{C1FB3106-D681-4FEA-9974-C574FF2522F6}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{C1FB3106-D681-4FEA-9974-C574FF2522F6}.Release|Any CPU.Build.0 = Release|Any CPU
+	EndGlobalSection
+	GlobalSection(NestedProjects) = preSolution
+		{C1FB3106-D681-4FEA-9974-C574FF2522F6} = {36C16D18-3BD4-4CBC-825C-F3FA028F0398}
 	EndGlobalSection
 EndGlobal
