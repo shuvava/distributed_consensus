@@ -1,0 +1,37 @@
+version: '3.8'
+
+services:
+  leader-node:
+    build:
+      context: .
+      dockerfile: ./examples/dotnet/Svv.Application.Api/Dockerfile
+    image: svv-application-api
+    container_name: svv-app-api-leader
+    ports:
+      - 8080:80
+    environment:
+      - ENABLE_BROADCAST_SENDER=true
+      - ASPNETCORE_ENVIRONMENT=Development
+    healthcheck:
+      test: ["CMD-SHELL", "wget http://localhost/health/liveness && rm liveness || exit 1"]
+      interval: 30s
+      timeout: 10s
+      retries: 3
+      start_period: 40s
+  follower-node:
+    build:
+      context: .
+      dockerfile: ./examples/dotnet/Svv.Application.Api/Dockerfile
+    image: svv-application-api
+    container_name: svv-app-api-follower
+    ports:
+      - 8081:80
+    environment:
+      - ASPNETCORE_ENVIRONMENT=Development
+    healthcheck:
+      test: ["CMD-SHELL", "wget http://localhost/health/liveness && rm liveness || exit 1"]
+      interval: 30s
+      timeout: 10s
+      retries: 3
+      start_period: 40s
+

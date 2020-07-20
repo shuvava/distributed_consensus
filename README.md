@@ -2,6 +2,18 @@
 
 Algorithms related to distributed consensus algorithms
 
+## Docker
+
+* [general commands](./docs/docker.md)
+
+## Run example
+
+```sh
+cd ./build/Svv.Application.Api
+dotnet Svv.Application.Api.dll --console
+```
+
+
 ## Links
 
 

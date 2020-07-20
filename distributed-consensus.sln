@@ -12,6 +12,10 @@ Project("{2150E333-8FDC-42A3-9474-1A3956D46DE8}") = "tests", "tests", "{36C16D18
 EndProject
 Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "Svv.Broadcaster.Tests", "tests\dotnet\Svv.Broadcaster.Tests\Svv.Broadcaster.Tests.csproj", "{C1FB3106-D681-4FEA-9974-C574FF2522F6}"
 EndProject
+Project("{2150E333-8FDC-42A3-9474-1A3956D46DE8}") = "examples", "examples", "{4B28B555-59A2-4291-AE07-31E245865A3B}"
+EndProject
+Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "Svv.Application.Api", "examples\dotnet\Svv.Application.Api\Svv.Application.Api.csproj", "{A14F5039-C378-49E3-AF20-F4B0F193280D}"
+EndProject
 Global
 	GlobalSection(SolutionConfigurationPlatforms) = preSolution
 		Debug|Any CPU = Debug|Any CPU
@@ -26,8 +30,13 @@ Global
 		{C1FB3106-D681-4FEA-9974-C574FF2522F6}.Debug|Any CPU.Build.0 = Debug|Any CPU
 		{C1FB3106-D681-4FEA-9974-C574FF2522F6}.Release|Any CPU.ActiveCfg = Release|Any CPU
 		{C1FB3106-D681-4FEA-9974-C574FF2522F6}.Release|Any CPU.Build.0 = Release|Any CPU
+		{A14F5039-C378-49E3-AF20-F4B0F193280D}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{A14F5039-C378-49E3-AF20-F4B0F193280D}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{A14F5039-C378-49E3-AF20-F4B0F193280D}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{A14F5039-C378-49E3-AF20-F4B0F193280D}.Release|Any CPU.Build.0 = Release|Any CPU
 	EndGlobalSection
 	GlobalSection(NestedProjects) = preSolution
 		{C1FB3106-D681-4FEA-9974-C574FF2522F6} = {36C16D18-3BD4-4CBC-825C-F3FA028F0398}
+		{A14F5039-C378-49E3-AF20-F4B0F193280D} = {4B28B555-59A2-4291-AE07-31E245865A3B}
 	EndGlobalSection
 EndGlobal
