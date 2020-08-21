@@ -2,10 +2,7 @@ version: '3.8'
 
 services:
   leader-node:
-    build:
-      context: .
-      dockerfile: ./examples/dotnet/Svv.Application.Api/Dockerfile
-    image: svv-application-api
+    image: svv-application-udpbroadcast-api:latest
     container_name: svv-app-api-leader
     ports:
       - 8080:80
@@ -19,10 +16,7 @@ services:
       retries: 3
       start_period: 40s
   follower-node:
-    build:
-      context: .
-      dockerfile: ./examples/dotnet/Svv.Application.Api/Dockerfile
-    image: svv-application-api
+    image: svv-application-udpbroadcast-api:latest
     container_name: svv-app-api-follower
     ports:
       - 8081:80

@@ -13,7 +13,7 @@ while [ -h "$SOURCE" ]; do # resolve $SOURCE until the file is no longer a symli
   [[ $SOURCE != /* ]] && SOURCE="$BASE_DIR/$SOURCE" # if $SOURCE was a relative symlink, we need to resolve it relative to the path where the symlink file was located
 done
 BASE_DIR="$( cd -P "$( dirname "$SOURCE" )/../.." >/dev/null 2>&1 && pwd )"
-cd ${BASE_DIR}
+cd "${BASE_DIR}" || exit
 ##################################
 # set variables ##################
 : "${DOMAIN:="mrshuvava"}"
@@ -32,7 +32,7 @@ fi
 : "${IMAGE_NAME:="${IMAGE_NAME_BASE}:v${BUILD_NUMBER}"}"
 actions=("build" "test" "run" "pull" "push" "clean")
 CIDFILE_DIR=$(mktemp --suffix=test_cidfiles -d)
-EXEC_PROJECTS=("Svv.Application.Api")
+EXEC_PROJECTS=("Svv.Application.UdpBroadcast.Api")
 
 info() {
   echo -e "\n\e[1m[INFO] $@\e[0m\n"
@@ -132,7 +132,7 @@ fi
 
 if [ "$ACTION" = "test" ]; then
   info "run tests"
-  local cid_file=$(mktemp -u --suffix=.cid)
+  cid_file=$(mktemp -u --suffix=.cid)
   trap cleanup EXIT
   create_container ${IMAGE_NAME_BASE}
   test_connection

@@ -6,12 +6,9 @@ Algorithms related to distributed consensus algorithms
 
 * [general commands](./docs/docker.md)
 
-## Run example
+## Examples
 
-```sh
-cd ./build/Svv.Application.Api
-dotnet Svv.Application.Api.dll --console
-```
+* [Simple UDP Broadcaster](./docs/examples/simple_udp_brodcast.md)
 
 
 ## Links

@@ -1,7 +1,7 @@
 ARG DOTNET_VERSION=3.1
 ARG DOTNET_VERSION_MINOR=201
 ARG DOTNET_RUNTIME=linux-musl-x64
-ARG PROJECT_NAME=Svv.Application.Api
+ARG PROJECT_NAME=Svv.Application.UdpBroadcast.Api
 ARG BUILD_CONFIGURATION=Release
 ARG BUILD_VERSION=1.0.0.0
 
@@ -49,6 +49,6 @@ WORKDIR /app
 COPY --from=build app/out .
 ENV TZ=UTC
 EXPOSE 80
-ENV ASPNETCORE_ENVIRONMENT=Fargate
+ENV ASPNETCORE_ENVIRONMENT=Docker
 ENV URLS="http://*:80"
-ENTRYPOINT ["dotnet", "./Svv.Application.Api.dll"]
+ENTRYPOINT ["dotnet", "./Svv.Application.UdpBroadcast.Api.dll"]

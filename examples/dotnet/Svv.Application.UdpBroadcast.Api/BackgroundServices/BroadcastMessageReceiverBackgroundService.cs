@@ -7,7 +7,7 @@ using Microsoft.Extensions.Logging;
 using Svv.Broadcaster;
 
 
-namespace Svv.Application.Api.BackgroundServices
+namespace Svv.Application.UdpBroadcast.Api.BackgroundServices
 {
     public class BroadcastMessageReceiverBackgroundService: IHostedService
     {

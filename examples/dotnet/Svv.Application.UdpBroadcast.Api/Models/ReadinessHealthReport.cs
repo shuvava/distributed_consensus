@@ -1,7 +1,7 @@
 using Microsoft.Extensions.Diagnostics.HealthChecks;
 
 
-namespace Svv.Application.Api.Models
+namespace Svv.Application.UdpBroadcast.Api.Models
 {
     public class ReadinessHealthReport
     {

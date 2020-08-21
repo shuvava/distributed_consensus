@@ -1,16 +1,12 @@
 using System;
-using System.Collections.Generic;
 using System.IO;
-using System.Linq;
-using System.Threading.Tasks;
 
 using Microsoft.AspNetCore.Hosting;
 using Microsoft.Extensions.Configuration;
-using Microsoft.Extensions.Hosting;
 using Microsoft.Extensions.Logging;
 
 
-namespace Svv.Application.Api
+namespace Svv.Application.UdpBroadcast.Api
 {
     public class Program
     {

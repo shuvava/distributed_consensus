@@ -4,7 +4,7 @@ using Microsoft.Extensions.Configuration;
 using Microsoft.Extensions.DependencyInjection;
 
 
-namespace Svv.Application.Api.Extensions
+namespace Svv.Application.UdpBroadcast.Api.Extensions
 {
     public static class HealthProbeStartup
     {

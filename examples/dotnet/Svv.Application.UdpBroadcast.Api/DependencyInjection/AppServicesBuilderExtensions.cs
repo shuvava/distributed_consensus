@@ -1,12 +1,12 @@
 using Microsoft.Extensions.Configuration;
 using Microsoft.Extensions.DependencyInjection;
 
-using Svv.Application.Api.BackgroundServices;
+using Svv.Application.UdpBroadcast.Api.BackgroundServices;
 using Svv.Broadcaster;
 using Svv.Broadcaster.Configuration;
 
 
-namespace Svv.Application.Api.DependencyInjection
+namespace Svv.Application.UdpBroadcast.Api.DependencyInjection
 {
     public static class AppServicesBuilderExtensions
     {

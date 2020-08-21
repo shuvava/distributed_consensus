@@ -5,11 +5,11 @@ using Microsoft.Extensions.Configuration;
 using Microsoft.Extensions.DependencyInjection;
 using Microsoft.Extensions.Hosting;
 
-using Svv.Application.Api.DependencyInjection;
-using Svv.Application.Api.Extensions;
+using Svv.Application.UdpBroadcast.Api.DependencyInjection;
+using Svv.Application.UdpBroadcast.Api.Extensions;
 
 
-namespace Svv.Application.Api
+namespace Svv.Application.UdpBroadcast.Api
 {
     public class Startup
     {

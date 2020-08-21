@@ -42,7 +42,6 @@ namespace Svv.Broadcaster
 
         public async Task AnnouncingAsync(string message, CancellationToken token = default)
         {
-
             var bytes = Encoding.ASCII.GetBytes(_config.Header+message);
             var announcingEndpoint = new IPEndPoint(IPAddress.Broadcast, _config.Port);
             using var client = new UdpClient();

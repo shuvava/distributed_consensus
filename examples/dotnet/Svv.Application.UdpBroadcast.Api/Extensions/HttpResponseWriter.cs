@@ -9,10 +9,10 @@ using Newtonsoft.Json;
 using Newtonsoft.Json.Converters;
 using Newtonsoft.Json.Serialization;
 
-using Svv.Application.Api.Models;
+using Svv.Application.UdpBroadcast.Api.Models;
 
 
-namespace Svv.Application.Api.Extensions
+namespace Svv.Application.UdpBroadcast.Api.Extensions
 {
     public static class HttpResponseWriter
     {

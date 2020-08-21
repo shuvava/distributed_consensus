@@ -1,6 +1,6 @@
 #!/usr/bin/env bash
 
-# set common variavles
+# set common variables
 set -a
 [ -f .env ] && . .env
 set +a
@@ -18,6 +18,7 @@ BASE_DIR="$( cd -P "$( dirname "$SOURCE" )/" >/dev/null 2>&1 && pwd )"
 # common helpers
 usage()
 {
+  echo "Usage: $(basename $0) -e example_name  Run example"
   echo "Usage: $(basename $0) -d docker_action [optional aruments] Run docker script"
   echo "Usage: $(basename $0) -h                                  Display this help message."
 }
@@ -35,8 +36,17 @@ set_variable()
   fi
 }
 
+
+run_example()
+{
+    # shellcheck source=./scripts/examples/make.sh
+    . "${BASE_DIR}/scripts/examples/make.sh"
+}
+
+
 run_docker()
 {
+    # shellcheck source=./scripts/docker/make.sh
     . "${BASE_DIR}/scripts/docker/make.sh"
 }
 
@@ -44,13 +54,17 @@ run_docker()
 # Main script starts here
 unset ACTION SRV
 
-while getopts 'dh?' opt
+while getopts 'dhe?' opt
 do
+  # shellcheck disable=SC2220
   case ${opt} in
     d)
         set_variable ACTION DOCKER
         ;;
-    h)
+    e)
+        set_variable ACTION EXAMPLE
+        ;;
+    h*)
       usage
       exit 0
       ;;
@@ -60,4 +74,5 @@ done
 [ -z "$ACTION" ] && usage && exit 2
 shift $((OPTIND-1))
 
-[ "$ACTION" == "DOCKER" ] && run_docker $@
+[ "$ACTION" == "DOCKER" ] && run_docker "$@"
+[ "$ACTION" == "EXAMPLE" ] && run_example "$@"
