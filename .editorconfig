@@ -10,20 +10,23 @@ insert_final_newline = true
 
 [*.config]
 insert_final_newline = false
-charset = utf-8-bom
 
 [*.csproj]
 insert_final_newline = false
-charset = utf-8-bom
 
 [*.cshtml]
 insert_final_newline = false
-charset = utf-8-bom
 
 [*.json]
 indent_size = 2
 
 [*.yml]
+indent_size = 2
+
+[*.sh]
+indent_size = 2
+
+[*.js]
 indent_size = 2
 
 [*.md]

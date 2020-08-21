@@ -20,7 +20,7 @@
     </PropertyGroup>
     <PropertyGroup>
         <OutputPath>$(SolutionDir)build\$(MSBuildProjectName)\bin\$(Configuration)</OutputPath>
-        <BaseIntermediateOutputPath>..\..\build\$(MSBuildProjectName)\obj</BaseIntermediateOutputPath>
+        <BaseIntermediateOutputPath>..\..\..\build\$(MSBuildProjectName)\obj</BaseIntermediateOutputPath>
     </PropertyGroup>
     <PropertyGroup>
         <GenerateDocumentationFile>false</GenerateDocumentationFile>

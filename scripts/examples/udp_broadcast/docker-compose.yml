@@ -1,0 +1,31 @@
+version: '3.8'
+
+services:
+  leader-node:
+    image: svv-application-udpbroadcast-api:latest
+    container_name: svv-app-api-leader
+    ports:
+      - 8080:80
+    environment:
+      - ENABLE_BROADCAST_SENDER=true
+      - ASPNETCORE_ENVIRONMENT=Development
+    healthcheck:
+      test: ["CMD-SHELL", "wget http://localhost/health/liveness && rm liveness || exit 1"]
+      interval: 30s
+      timeout: 10s
+      retries: 3
+      start_period: 40s
+  follower-node:
+    image: svv-application-udpbroadcast-api:latest
+    container_name: svv-app-api-follower
+    ports:
+      - 8081:80
+    environment:
+      - ASPNETCORE_ENVIRONMENT=Development
+    healthcheck:
+      test: ["CMD-SHELL", "wget http://localhost/health/liveness && rm liveness || exit 1"]
+      interval: 30s
+      timeout: 10s
+      retries: 3
+      start_period: 40s
+

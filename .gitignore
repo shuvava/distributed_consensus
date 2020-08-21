@@ -331,3 +331,4 @@ ASALocalRun/
 
 # Jmeter assertion results
 *.jtl
+.env

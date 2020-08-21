@@ -1,7 +1,80 @@
 ﻿Microsoft Visual Studio Solution File, Format Version 12.00
+Project("{2150E333-8FDC-42A3-9474-1A3956D46DE8}") = "Solution Items", "Solution Items", "{38C37BC2-C93F-4841-8112-350DAC1C9199}"
+ProjectSection(SolutionItems) = preProject
+	README.md = README.md
+	.editorconfig = .editorconfig
+	nuget.config = nuget.config
+	.env = .env
+EndProjectSection
+EndProject
+Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "Svv.Broadcaster", "src\dotnet\Svv.Broadcaster\Svv.Broadcaster.csproj", "{851ABC92-4E73-4A18-AD9C-601D89B393F4}"
+EndProject
+Project("{2150E333-8FDC-42A3-9474-1A3956D46DE8}") = "tests", "tests", "{36C16D18-3BD4-4CBC-825C-F3FA028F0398}"
+EndProject
+Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "Svv.Broadcaster.Tests", "tests\dotnet\Svv.Broadcaster.Tests\Svv.Broadcaster.Tests.csproj", "{C1FB3106-D681-4FEA-9974-C574FF2522F6}"
+EndProject
+Project("{2150E333-8FDC-42A3-9474-1A3956D46DE8}") = "examples", "examples", "{4B28B555-59A2-4291-AE07-31E245865A3B}"
+EndProject
+Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "Svv.Application.UdpBroadcast.Api", "examples\dotnet\Svv.Application.UdpBroadcast.Api\Svv.Application.UdpBroadcast.Api.csproj", "{A14F5039-C378-49E3-AF20-F4B0F193280D}"
+EndProject
+Project("{2150E333-8FDC-42A3-9474-1A3956D46DE8}") = "Docs", "Docs", "{1FA1E575-8975-438A-B0B5-6949C67E46D6}"
+ProjectSection(SolutionItems) = preProject
+	docs\docker.md = docs\docker.md
+EndProjectSection
+EndProject
+Project("{2150E333-8FDC-42A3-9474-1A3956D46DE8}") = "examples", "examples", "{1B789CDD-80AD-44B1-BD4C-A37117177F2C}"
+ProjectSection(SolutionItems) = preProject
+	docs\examples\simple_udp_brodcast.md = docs\examples\simple_udp_brodcast.md
+	docs\examples\examples.md = docs\examples\examples.md
+EndProjectSection
+EndProject
+Project("{2150E333-8FDC-42A3-9474-1A3956D46DE8}") = "scripts", "scripts", "{FA866DB2-6118-4DD4-BC9F-C5636C4FC187}"
+ProjectSection(SolutionItems) = preProject
+	make.sh = make.sh
+EndProjectSection
+EndProject
+Project("{2150E333-8FDC-42A3-9474-1A3956D46DE8}") = "docker", "docker", "{326C0475-17C1-4209-B5DC-BDAE01313F0F}"
+ProjectSection(SolutionItems) = preProject
+	scripts\docker\build_docker.sh = scripts\docker\build_docker.sh
+	scripts\docker\image_cleanup.sh = scripts\docker\image_cleanup.sh
+	scripts\docker\make.sh = scripts\docker\make.sh
+EndProjectSection
+EndProject
+Project("{2150E333-8FDC-42A3-9474-1A3956D46DE8}") = "examples", "examples", "{16187469-9890-42FE-B4D1-5F8A5F2A90EB}"
+ProjectSection(SolutionItems) = preProject
+	scripts\examples\make.sh = scripts\examples\make.sh
+EndProjectSection
+EndProject
+Project("{2150E333-8FDC-42A3-9474-1A3956D46DE8}") = "udp_broadcast", "udp_broadcast", "{507E2A45-F3AF-4B4F-90DE-26016568A659}"
+ProjectSection(SolutionItems) = preProject
+	scripts\examples\udp_broadcast\docker-compose.yml = scripts\examples\udp_broadcast\docker-compose.yml
+EndProjectSection
+EndProject
 Global
 	GlobalSection(SolutionConfigurationPlatforms) = preSolution
 		Debug|Any CPU = Debug|Any CPU
 		Release|Any CPU = Release|Any CPU
+	EndGlobalSection
+	GlobalSection(ProjectConfigurationPlatforms) = postSolution
+		{851ABC92-4E73-4A18-AD9C-601D89B393F4}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{851ABC92-4E73-4A18-AD9C-601D89B393F4}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{851ABC92-4E73-4A18-AD9C-601D89B393F4}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{851ABC92-4E73-4A18-AD9C-601D89B393F4}.Release|Any CPU.Build.0 = Release|Any CPU
+		{C1FB3106-D681-4FEA-9974-C574FF2522F6}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{C1FB3106-D681-4FEA-9974-C574FF2522F6}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{C1FB3106-D681-4FEA-9974-C574FF2522F6}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{C1FB3106-D681-4FEA-9974-C574FF2522F6}.Release|Any CPU.Build.0 = Release|Any CPU
+		{A14F5039-C378-49E3-AF20-F4B0F193280D}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{A14F5039-C378-49E3-AF20-F4B0F193280D}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{A14F5039-C378-49E3-AF20-F4B0F193280D}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{A14F5039-C378-49E3-AF20-F4B0F193280D}.Release|Any CPU.Build.0 = Release|Any CPU
+	EndGlobalSection
+	GlobalSection(NestedProjects) = preSolution
+		{C1FB3106-D681-4FEA-9974-C574FF2522F6} = {36C16D18-3BD4-4CBC-825C-F3FA028F0398}
+		{A14F5039-C378-49E3-AF20-F4B0F193280D} = {4B28B555-59A2-4291-AE07-31E245865A3B}
+		{1B789CDD-80AD-44B1-BD4C-A37117177F2C} = {1FA1E575-8975-438A-B0B5-6949C67E46D6}
+		{326C0475-17C1-4209-B5DC-BDAE01313F0F} = {FA866DB2-6118-4DD4-BC9F-C5636C4FC187}
+		{16187469-9890-42FE-B4D1-5F8A5F2A90EB} = {FA866DB2-6118-4DD4-BC9F-C5636C4FC187}
+		{507E2A45-F3AF-4B4F-90DE-26016568A659} = {16187469-9890-42FE-B4D1-5F8A5F2A90EB}
 	EndGlobalSection
 EndGlobal
