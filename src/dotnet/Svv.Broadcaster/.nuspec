@@ -6,7 +6,7 @@
         <id>Svv.Broadcaster</id>
 
         <!-- The package version number that is used when resolving dependencies -->
-        <version>2.0.0</version>
+        <version>1.0.0</version>
 
         <!-- Authors contain text that appears directly on the gallery -->
         <authors>shuvava</authors>
@@ -32,11 +32,8 @@
         </dependencies>
     </metadata>
     <files>
-        <file src="..\..\build\Svv.Broadcaster\bin\$Configuration$\netstandard2.1\Svv.*.dll"
-              target="lib\netstandard2.1"/>
-        <file src="..\..\build\Svv.Broadcaster\bin\$Configuration$\netstandard2.1\Svv.*.json"
-              target="lib\netstandard2.1"/>
-        <file src="..\..\build\Svv.Broadcaster\bin\$Configuration$\netstandard2.1\Svv.*.pdb"
-              target="lib\netstandard2.1"/>
+        <file src="Svv.*.dll" target="lib\netstandard2.1"/>
+        <file src="Svv.*.json" target="lib\netstandard2.1"/>
+        <file src="Svv.*.pdb" target="lib\netstandard2.1"/>
     </files>
 </package>
