@@ -43,10 +43,10 @@ steps:
     configuration: '$(BuildConfiguration)'
 
 - task: NuGetCommand@2
-  displayName: 'NuGet pack'
+  displayName: 'NuGet pack Svv.Broadcaster'
   inputs:
     command: pack
-    packagesToPack: '$(System.DefaultWorkingDirectory)\build\**\bin\$(BuildConfiguration)\**\.nuspec;'
+    packagesToPack: '$(System.DefaultWorkingDirectory)\build\Svv.Broadcaster\bin\$(BuildConfiguration)\**\.nuspec;'
     packDestination: '$(System.DefaultWorkingDirectory)'
 
 - task: NuGetCommand@2
