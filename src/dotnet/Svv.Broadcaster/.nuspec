@@ -1,0 +1,42 @@
+<?xml version="1.0"?>
+<package xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance"
+         xsi:schemaLocation="http://schemas.microsoft.com/packaging/2013/05/nuspec.xsd ">
+    <metadata>
+        <!-- The identifier that must be unique within the hosting gallery -->
+        <id>Svv.Broadcaster</id>
+
+        <!-- The package version number that is used when resolving dependencies -->
+        <version>2.0.0</version>
+
+        <!-- Authors contain text that appears directly on the gallery -->
+        <authors>shuvava</authors>
+        <owners>shuvava</owners>
+        <licenseUrl>https://raw.githubusercontent.com/shuvava/distributed_consensus/master/LICENSE</licenseUrl>
+        <projectUrl>https://github.com/shuvava/distributed_consensus</projectUrl>
+
+        <requireLicenseAcceptance>false</requireLicenseAcceptance>
+
+        <description>UDP Broadcaster</description>
+
+
+        <!-- Tags appear in the gallery and can be used for tag searches -->
+        <tags>UDP broadcast</tags>
+
+        <!-- Dependencies are automatically installed when the package is installed -->
+        <dependencies>
+            <group targetFramework=".NETStandard2.1">
+                <dependency id="Microsoft.Extensions.Logging.Abstractions" version="3.1.6" exclude="Build,Analyzers" />
+                <dependency id="Microsoft.Extensions.Options" version="3.1.6" exclude="Build,Analyzers" />
+                <dependency id="System.Diagnostics.DiagnosticSource" version="4.7.1" exclude="Build,Analyzers" />
+            </group>
+        </dependencies>
+    </metadata>
+    <files>
+        <file src="..\..\build\Svv.Broadcaster\bin\$Configuration$\netstandard2.1\Svv.*.dll"
+              target="lib\netstandard2.1"/>
+        <file src="..\..\build\Svv.Broadcaster\bin\$Configuration$\netstandard2.1\Svv.*.json"
+              target="lib\netstandard2.1"/>
+        <file src="..\..\build\Svv.Broadcaster\bin\$Configuration$\netstandard2.1\Svv.*.pdb"
+              target="lib\netstandard2.1"/>
+    </files>
+</package>

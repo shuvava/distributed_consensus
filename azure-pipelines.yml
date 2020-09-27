@@ -18,10 +18,12 @@ steps:
 - task: NuGetToolInstaller@1
 
 - task: NuGetCommand@2
+  displayName: 'NuGet restore'
   inputs:
     restoreSolution: '$(solution)'
 
 - task: VSBuild@1
+  isplayName: 'Build solution'
   inputs:
     solution: '$(solution)'
     msbuildArgs: '/p:DeployOnBuild=true /p:WebPublishMethod=Package /p:PackageAsSingleFile=true /p:SkipInvalidConfigurations=true /p:DesktopBuildPackageLocation="$(build.artifactStagingDirectory)\WebApp.zip" /p:DeployIisAppPath="Default Web Site"'
@@ -29,6 +31,29 @@ steps:
     configuration: '$(buildConfiguration)'
 
 - task: VSTest@2
+  displayName: 'Test Assemblies'
   inputs:
-    platform: '$(buildPlatform)'
-    configuration: '$(buildConfiguration)'
+    testAssemblyVer2: |
+      build\**\bin\$(BuildConfiguration)\**\*tests.dll
+      !**\obj\**
+      !**\*TestAdapter.dll
+    runInParallel: true
+    codeCoverageEnabled: true
+    platform: '$(BuildPlatform)'
+    configuration: '$(BuildConfiguration)'
+
+- task: NuGetCommand@2
+  displayName: 'NuGet pack'
+  inputs:
+    command: pack
+    packagesToPack: '$(System.DefaultWorkingDirectory)\src\dotnet\**\.nuspec;'
+    packDestination: '$(System.DefaultWorkingDirectory)'
+
+- task: NuGetCommand@2
+  displayName: 'NuGet push'
+  inputs:
+    command: push
+    packagesToPush: '$(System.DefaultWorkingDirectory)\src\dotnet\**\.nuspec;'
+    nuGetFeedType: external
+    publishFeedCredentials: NuGet
+  enabled: false

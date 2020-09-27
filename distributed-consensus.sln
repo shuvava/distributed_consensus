@@ -5,6 +5,7 @@ ProjectSection(SolutionItems) = preProject
 	.editorconfig = .editorconfig
 	nuget.config = nuget.config
 	.env = .env
+	azure-pipelines.yml = azure-pipelines.yml
 EndProjectSection
 EndProject
 Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "Svv.Broadcaster", "src\dotnet\Svv.Broadcaster\Svv.Broadcaster.csproj", "{851ABC92-4E73-4A18-AD9C-601D89B393F4}"
