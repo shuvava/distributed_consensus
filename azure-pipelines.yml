@@ -46,14 +46,14 @@ steps:
   displayName: 'NuGet pack'
   inputs:
     command: pack
-    packagesToPack: '$(System.DefaultWorkingDirectory)\src\dotnet\**\.nuspec;'
+    packagesToPack: '$(System.DefaultWorkingDirectory)\build\**\bin\$(BuildConfiguration)\**\.nuspec;'
     packDestination: '$(System.DefaultWorkingDirectory)'
 
 - task: NuGetCommand@2
   displayName: 'NuGet push'
   inputs:
     command: push
-    packagesToPush: '$(System.DefaultWorkingDirectory)\src\dotnet\**\.nuspec;'
+    packagesToPush: '$(System.DefaultWorkingDirectory)\build\**\bin\$(BuildConfiguration)\**\.nuspec;'
     nuGetFeedType: external
     publishFeedCredentials: NuGet
   enabled: false
